@@ -23,7 +23,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t praveen611/django-ecommerce:latest .
+        run:  |
+            docker build -t praveen611/django-ecommerce: latest .
 
       - name: Push Docker Image to Docker Hub
-        run: docker push praveen611/django-ecommerce:latest
+        run:  |
+            docker push praveen611/django-ecommerce: latest
